@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    public void test(String s)
+    {
+        String odd="",even="";
+        char[] ch = new char[s.length()];
+    
+        for(int i=0;i<s.length();i++)
+        {
+            ch[i]=s.charAt(i);
+        }
+    
+        int n=ch.length;
+        
+        for(int i=0;i<n;i++)
+        {
+            if(i%2==1)
+            {
+              odd+=ch[i];   
+            }
+            else
+            {
+                even+=ch[i];
+            }
+        }
+        
+        System.out.print(even+" "+odd);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Solution ob =new Solution();
+        int limit;
+        String str="";
+        Scanner sc = new Scanner(System.in);
+        limit=sc.nextInt();
+        for(int i=0;i<limit;i++)
+        {
+            str = sc.next();
+            ob.test(str);  
+        }
+    }
+}
